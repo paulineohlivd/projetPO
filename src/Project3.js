@@ -15,4 +15,6 @@ function Project3(props) {
 />
     </div>
   );
-}   
+} 
+
+export default Project3;
