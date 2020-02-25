@@ -97,8 +97,9 @@ svg {
 #cardPres {
   width: 30rem;
   opacity: 0.8;
-  color: #848B8D;
+  color: #805E73;
   text-align:center;
+ 
 }
 
 img.card-img-top {
@@ -106,8 +107,12 @@ img.card-img-top {
 }
 
 .btn.btn-primary {
-  background-color: #13A89E;
+  background-color: #805E73;
   border :none;
+}
+.btn.btn-primary:hover {
+  text-decoration: none;
+  background-color: #805E73;
 }
 
 
