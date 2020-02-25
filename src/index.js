@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'react-bootstrap';
 
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -18,7 +23,7 @@ class App extends React.Component {
       <Parallax ref={ref => (this.parallax = ref)} pages={3}>
 
         <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
-        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#13A89E' }} />
 
 
         <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }} />
@@ -92,14 +97,21 @@ class App extends React.Component {
           onClick={() => this.parallax.scrollTo(2)}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               {
-                 <div class="card" style="width: 18rem;">
-                 <img class="card-img-top" src="..." alt="Card image cap"/>
-                 <div class="card-body">
-                   <h5 class="card-title">Card title</h5>
-                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   <a href="#" class="btn btn-primary">Go somewhere</a>
-                 </div>
-               </div>
+                <Card id="cardPres">
+                 <Card.Body>
+                     <Card.Img variant="top" src="./photoid.jpg" style={{ width: '5rem' }} />
+                     <Card.Title></Card.Title>
+                     <Card.Text>
+                        La chimiste au devant du digital !<br></br>
+
+                        Après 10 ans d’expériences dans la chimie, je veux donner un nouvel élan à ma carrière et me tourner vers l’avenir !!<br></br>
+                        Le digital m’attire depuis longtemps, j’ai saisi l’opportunité de mon retour en France après un passage de 2 ans à l’étranger pour me lancer dans ce nouveau challenge ! 
+                        Actuellement en formation à l'ENI, j'effectue un stage à partir de Mars en ReactJS et Symfony. !<br></br>
+                        Ma capacité d’adaptabilité éprouvée durant ma carrière sera un atout pour ce nouveau challenge que j’ai bien l’intention de surmonter ! 
+                  </Card.Text>
+                  <Button variant="primary">En savoir plus</Button>
+                </Card.Body>
+              </Card>
               }
           
         </ParallaxLayer>

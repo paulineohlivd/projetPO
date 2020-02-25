@@ -94,4 +94,20 @@ svg {
   background: linear-gradient(to right, tomato 0%, gold 100%);
 }
 
+#cardPres {
+  width: 30rem;
+  opacity: 0.8;
+  color: #848B8D;
+  text-align:center;
+}
+
+img.card-img-top {
+  border-radius: 50px;
+}
+
+.btn.btn-primary {
+  background-color: #13A89E;
+  border :none;
+}
+
 
