@@ -30,6 +30,12 @@ svg {
   margin: 0 2rem;
 }
 
+.entete h1, h2 {
+  color:#805E73;
+  text-align: center;
+  font-weight: 800;
+}
+
 .intro {
   border: solid pink;
   border-radius: 5px;
@@ -96,10 +102,20 @@ svg {
 
 #cardPres {
   width: 50rem;
-  opacity: 0.8;
+  opacity: 0.9;
   color: #805E73;
   text-align:center;
  
+}
+
+#modale {
+  color:#13A89E;
+  text-align:center;
+}
+
+#modale button.btn.btn-primary {
+  background-color: #13A89E;
+  border :none;
 }
 
 img.card-img-top {
@@ -120,5 +136,10 @@ i{
   margin :5px;
   color: #805E73;
 }
+
+#formulaireContact {
+  padding : 20px;
+}
+
 
 

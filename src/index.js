@@ -4,10 +4,11 @@ import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-  } from 'react-bootstrap';
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'react-bootstrap';
 import CardPresentation from './CardPresentation';
+import Accordion from './Accordion.js';
 
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -82,13 +83,21 @@ class App extends React.Component {
           onClick={() => this.parallax.scrollTo(1)}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {
-              <div class="scroll">
-                  <p>SCROLL</p>
-                    <svg version="1.1" x="0px" y="0px" viewBox="0 0 167 299">
-                        <polygon class="fill-3" points="167,73 83.5,298.9 0,73 " style={{ fill:"pink"}}></polygon>
-                        <polygon class="fill-1" points="137.4,0 83.5,145.9 29.6,0 " style={{ fill:"#805E73"}} ></polygon>
-                    </svg>
-             </div>
+
+            <div class="entete">
+              <h1> Site de Pauline</h1>
+              <h2> Découvrez-en un peu plus sur moi plus bas <i class="far fa-grin"></i> </h2>
+            </div>
+          }
+          {
+            <div class="scroll">
+              <p>SCROLL</p>
+              <svg version="1.1" x="0px" y="0px" viewBox="0 0 167 299">
+                <polygon class="fill-3" points="167,73 83.5,298.9 0,73 " style={{ fill: "pink" }}></polygon>
+                <polygon class="fill-1" points="137.4,0 83.5,145.9 29.6,0 " style={{ fill: "#805E73" }} ></polygon>
+              </svg>
+            </div>
+
           }
         </ParallaxLayer>
 
@@ -97,10 +106,11 @@ class App extends React.Component {
           speed={0.1}
           onClick={() => this.parallax.scrollTo(2)}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {
-                <CardPresentation id="cardPres"></CardPresentation>
-              }
-          
+          {
+            <CardPresentation></CardPresentation>
+
+          }
+
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -108,14 +118,17 @@ class App extends React.Component {
           speed={-0}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={() => this.parallax.scrollTo(0)}>
-               {
-                  <div class="intro">
-                      <h2> CV</h2>
-                  </div>
-              }
-         
+          {
+            <div class="intro">
+              <h2> CV</h2>
+            </div>
+          }
+        <Accordion></Accordion>
         </ParallaxLayer>
+        
       </Parallax>
+
+      
     )
   }
 }

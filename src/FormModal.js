@@ -3,6 +3,7 @@ import Thumbnail from './Thumbnail.js';
 import './App.css';
 import './index.css';
 import { useState } from 'react';
+import FormContact from './FormContact.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     Card, CardImg, CardText, CardBody,
@@ -20,18 +21,21 @@ function FormModal(props) {
         <>
             <i class="fas fa-envelope" onClick={handleShow}></i>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal  id="modale" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>On reste en contact ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Envoyez moi un petit message !</Modal.Body>
+
+                <FormContact></FormContact>
+
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Fermer
-          </Button>
+                    </Button>
                     <Button variant="primary" onClick={handleClose}>
                         Envoyer
-          </Button>
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </>
