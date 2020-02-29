@@ -8,7 +8,8 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'react-bootstrap';
 import CardPresentation from './CardPresentation';
-import Accordion from './Accordion.js';
+import Accordeon from './Accordeon.js';
+import Curriculum from './Curriculum.js';
 
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -119,16 +120,10 @@ class App extends React.Component {
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={() => this.parallax.scrollTo(0)}>
           {
-            <div class="intro">
-              <h2> CV</h2>
-            </div>
+             <Curriculum></Curriculum>
           }
-        <Accordion></Accordion>
         </ParallaxLayer>
-        
-      </Parallax>
-
-      
+      </Parallax>     
     )
   }
 }

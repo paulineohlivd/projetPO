@@ -3,15 +3,19 @@ import Thumbnail from './Thumbnail.js';
 import './App.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Accordion from 'react-bootstrap/Accordion'
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'react-bootstrap';
+import Accordion from 'react-bootstrap/Accordion';
 
 
-  function Accordion(props) {
+  function Accordeon(props) {
     return (
         <Accordion defaultActiveKey="0">
           <Card>
             <Card.Header>
-              <CustomToggle eventKey="0">Click me!</CustomToggle>
+              {/* <CustomToggle eventKey="0">Click me!</CustomToggle> */}
             </Card.Header>
             <Accordion.Collapse eventKey="0">
               <Card.Body>Hello! I'm the body</Card.Body>
@@ -19,7 +23,7 @@ import Accordion from 'react-bootstrap/Accordion'
           </Card>
           <Card>
             <Card.Header>
-              <CustomToggle eventKey="1">Click me!</CustomToggle>
+              {/* <CustomToggle eventKey="1">Click me!</CustomToggle> */}
             </Card.Header>
             <Accordion.Collapse eventKey="1">
               <Card.Body>Hello! I'm another body</Card.Body>
@@ -29,4 +33,4 @@ import Accordion from 'react-bootstrap/Accordion'
       );
   }
 
-  export default Accordion; 
+  export default Accordeon; 
