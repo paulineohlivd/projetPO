@@ -27,9 +27,14 @@ class App extends React.Component {
 
         <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#13A89E' }} />
+        
 
 
-        <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }} />
+
+        <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }} /> 
+        {/* <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: url('./demo.jpeg', true), backgroundSize: 'cover' }} /> */}
+
+
 
         <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
           {/* <img src="./origamibirds.png"style={{ width: '15%', marginLeft: '70%' }} /> */}
@@ -105,7 +110,7 @@ class App extends React.Component {
         <ParallaxLayer
           offset={1}
           speed={0.1}
-          onClick={() => this.parallax.scrollTo(2)}
+          onClick={() => this.parallax.scrollTo(3)}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {
             <CardPresentation></CardPresentation>
@@ -115,14 +120,31 @@ class App extends React.Component {
         </ParallaxLayer>
 
         <ParallaxLayer
+          offset={3}
+          speed={0.1}
+          onClick={() => this.parallax.scrollTo(2)}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {
+           <div></div>
+
+          }
+
+        </ParallaxLayer>
+
+
+
+        <ParallaxLayer
           offset={2}
           speed={-0}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-          onClick={() => this.parallax.scrollTo(0)}>
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height:'auto'}}
+          onClick={() => this.parallax.scrollTo(1)}>
           {
-             <Curriculum></Curriculum>
+              <div>
+                <Curriculum></Curriculum>
+            </div> 
           }
         </ParallaxLayer>
+        
       </Parallax>     
     )
   }

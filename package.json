@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "d3": "^5.15.0",
     "framer-motion": "^1.8.4",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",

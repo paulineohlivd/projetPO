@@ -83,35 +83,48 @@ const education = [
 
 const experience = [
   {
-    startDate: new Date("2020-01-08"),
+    startDate: new Date("2019-09"),
     endDate: new Date("ongoing"),
-    title: "Waitress",
+    title: "Projets informatiques développés à l'ENI",
     children: (
       <>
-        <p>Hai Restaurant</p>
-        <p>Malmö, Sweden</p>
+        <p>ENI Ecole Informatique - Nantes (2019-2020)</p>
+        <p>
+          <ul>
+          <li> Développement d’un site d’enchères sous Java EE et SQL Server </li>
+          <li> Analyse, conception et développement d’un site d’organisation d’évènements d’entreprises avec JAVA EE et SQL Server / PHP et MySQL : définition de tests et d’outils de passage des tests.</li>
+          </ul>
+        </p>
       </>
     )
   },
   {
-    startDate: new Date("2012-09-30"),
-    endDate: new Date("2013-05-30"),
-    title: "Nutrition Advisor",
+    startDate: new Date("2019-07"),
+    endDate: new Date("2019-07"),
+    title: "Stage d'observation",
     children: (
       <>
-        <p>Abbott Laboratories</p>
-        <p>Manila, Philippines</p>
+        <p>Stéréosuper - Nantes (Juillet 2019)</p>
+        <ul>
+          <li> Découvert du métier de développeur web Front End </li>
+          <li> Utilisation d'outils de développement et librairies</li>
+        </ul>
       </>
     )
   },
   {
-    startDate: new Date("2009-11-30"),
-    endDate: new Date("2012-08-30"),
-    title: "Real Estate Agent",
+    startDate: new Date("2019-05"),
+    endDate: new Date("2019-06"),
+    title: "Digital Job Ambition #3",
     children: (
       <>
-        <p>SM Development Corp.</p>
-        <p>Manila, Philippines</p>
+        <p>Maison de l'emploi de Nantes (Mai à Juin 2019)</p>
+        <ul>
+          <li> Découverte de l’écosystème numérique : métiers, entreprises, écoles </li>
+          <li> Techniques d'initiation: HTML, CSS, data, UX / UI, scrum </li>
+          <li> Production d’un site web pour un client (association) </li>
+          <li> Production de documents techniques (tutoriels)</li>
+        </ul>
       </>
     )
   }
@@ -137,13 +150,12 @@ function Curriculum(props)  {
     <div className="resume">
       <div className="resume-left">
         <div className="resume-profile">
-          <div className="resume-profile-img">
-            {/* Image à ajouter */}
-            {/* <img
+          {/* <div className="resume-profile-img">   
+             {<img
               src="https://i.pinimg.com/originals/15/d2/75/15d275683940f589ed37dc3a169b9fc3.gif"
               alt="avatar"
-            /> */}
-          </div>
+            /> }
+             </div> */}
           <div className="resume-profile-info">
             <h1 className="name">Pauline Olliveaud</h1>
             <h2 className="career">Développeur FullStack</h2>

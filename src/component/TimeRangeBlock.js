@@ -12,11 +12,11 @@ const TimeRangeBlock = ({ title, children, startDate, endDate }) => {
 
   return (
     <div className="time-range-block">
-      <div className="time-range-block__col1 time-range-block__time">
-        {startStr}-{endStr}
-      </div>
+      {/* <div className="time-range-block__col1 time-range-block__time">
+       {startStr}-{endStr} 
+      </div> */}
       <div className="time-range-block__col2">
-        <h3 className="time-range-block__title">{title}</h3>
+        <h5 className="time-range-block__title">{title}</h5>
         <div className="time-range-block__content">{children}</div>
       </div>
     </div>

@@ -6,7 +6,8 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #253237;
+  background-color: #253237; 
+  
 }
 
 html, body, div, a, i, button, select, option, optgroup, hr, br { -webkit-touch-callout: none; -webkit-user-select: none;
@@ -143,7 +144,8 @@ i{
 
 
 /* CV */
-* {
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -163,12 +165,13 @@ a {
   color: #000;
   display: block;
   transition-duration: 0.3s;
-}
+} */
 
 h3 {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  font-size: small;
+  
 }
 
 p {
@@ -177,11 +180,9 @@ p {
 }
 
 .resume {
-  width: 840px;
-  height: auto;
+  width: 1000px;
   background: #f4f4f4;
   align-items: center;
-  margin: 50px auto;
   display: flex;
   position: relative;
 }
@@ -192,24 +193,24 @@ p {
   padding-left: 30px;
 }
 
-.resume-profile img {
+/* .resume-profile img {
   width: 250px;
   height: 250px;
   margin-top: -70px;
-}
+} */
 
-.resume-profile-img {
+/* .resume-profile-img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .resume-profile-info {
   text-align: center;
 }
 
 .resume-profile-info .name {
-  margin-top: 20px;
+  margin-top: 20px; 
   margin-bottom: 0;
   font-size: 27px;
 }
@@ -217,7 +218,7 @@ p {
 .resume-profile-info .career {
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 17px;
+  font-size: 15px;
 }
 .resume-contact-info {
   padding-left: 10px;
@@ -231,19 +232,19 @@ p {
   text-align: center;
   margin-right: 15px;
   transition-duration: 0.3s;
-}
+} 
 
-.resume-follow-icons {
+/* .resume-follow-icons {
   text-align: center;
   vertical-align: middle;
-}
+} */
 
-.resume-follow-icons a {
+/* .resume-follow-icons a {
   display: inline-block;
   vertical-align: text-bottom;
-}
+} */
 
-.resume-follow-icons i {
+/* .resume-follow-icons i {
   display: inline-block;
   font-size: 30px;
   background: #13A89E;
@@ -252,35 +253,22 @@ p {
   border-radius: 50%;
   line-height: 60px;
   color: #f4f4f4;
-  margin: 0 10px 10px 10px;
+  margin: 0 10px 10px 10px; 
   transition-duration: 0.3s;
-}
+} */
 
 .resume-right {
   width: 60%;
   background: #f4f4f4;
-  padding: 30px 15px;
+  padding: 30px 15px; 
 }
 
-.resume-item {
+/* .resume-item {
   padding: 20px 0;
   padding-left: 30px;
   border-left: solid 2px #5e5a5e;
   position: relative;
-}
-
-.resume-item:before {
-  content: "";
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #bf5091;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  transform: translate(-50%, 140%);
-}
+} */
 
 .resume-item-list_title {
   flex: 1;
@@ -295,7 +283,7 @@ p {
 .resume-item-list {
   display: inline-block;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .resume-item__title:before {
@@ -319,13 +307,13 @@ p {
 .resume-right {
   width: 697px;
   background: #f4f4f4;
-  padding: 25px;
+  padding: 5px;
 }
 
 .time-range-block {
   display: flex;
-  margin-bottom: 20px;
-}
+  /* margin-bottom: 20px; */
+} 
 
 .time-range-block__col1 {
   display: block;
@@ -333,32 +321,10 @@ p {
   overflow: hidden;
 }
 
-.time-range-block__col2 {
-  flex: 1;
-}
-
-.time-range-block__title {
-  margin: 0;
-  text-transform: capitalize;
-}
-
 .time-range-block__content * {
   margin: 0;
   color: #666;
 }
-
-.time-range-block__time {
-  font-weight: bold;
-}
-
-/* .skill-item-content {
-  display: flex;
-  padding-top: 20px;
-}
-
-.skill-item-level {
-  display: flex;
-} */
 
 .competences {
   font-size: small;
@@ -387,6 +353,7 @@ p {
 }
 
 .interest-item {
+  margin-right: 70px;
   display: flex;
   justify-content: space-around;
   padding-top: 40px;
@@ -403,19 +370,19 @@ p {
   top: 0%;
   left: 0%;
   transform: translate(-50%, 290%);
-}
+} 
 
 .interest-item-list {
   box-sizing: border-box;
-  padding: 0 0 15px;
+  padding: 0 0 15px; 
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: space-between;
-}
+} 
 
 .interest-item i {
-  font-size: 40px;
+  font-size: 30px;
   color: #13A89E;
 }
 
