@@ -127,7 +127,48 @@ const experience = [
         </ul>
       </>
     )
-  }
+  },
+  {
+    startDate: new Date("2017-03"),
+    endDate: new Date("2019-02"),
+    title: "Spécialiste Validation et Métrologie",
+    children: (
+      <>
+        <p>Pfizer - Montréal (Mars 2017 à Février 2019)</p>
+        <ul>
+          <li> Expert Data Integrity : Assurance et maintien de l'intégrité et exactitude des données tout au long de leur cycle de vie dans l'usine </li>
+        </ul>
+      </>
+    )
+  },
+  {
+    startDate: new Date("2016-04"),
+    endDate: new Date("2017-02"),
+    title: "Chimiste Analytique",
+    children: (
+      <>
+        <p>GIRPA - Angers (Avril 2016 à Février 2017)</p>
+        <ul>
+          <li> Réalisation de dossiers d'autorisation de mise sur le marché de nouveaux pesticides - Analyses et rédaction
+Traitement de données brutes </li>
+        </ul>
+      </>
+    )
+  },
+  {
+    startDate: new Date("2012-02"),
+    endDate: new Date("2016-03"),
+    title: "Chargée secteur bactériologie des eaux",
+    children: (
+      <>
+        <p>LDA56 - Saint-Avé (Avril 2016 à Février 2017)</p>
+        <ul>
+          <li> Encadrement équipe de 3 techniciens </li>
+          <li> Analyses dans le cadre du contrôle sanitaire sur les eaux de réseau et de loisir du Morbihan</li>
+        </ul>
+      </>
+    )
+  },
 ];
 
 const interests = [
