@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
@@ -10,6 +13,7 @@ import {
 import CardPresentation from './CardPresentation';
 import Accordeon from './Accordeon.js';
 import Curriculum from './Curriculum.js';
+import Carroussel from './Carroussel';
 
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -139,9 +143,10 @@ class App extends React.Component {
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height:'auto'}}
           onClick={() => this.parallax.scrollTo(1)}>
           {
-              <div>
-                <Curriculum></Curriculum>
-            </div> 
+           
+                <Carroussel></Carroussel>
+           
+             
           }
         </ParallaxLayer>
         

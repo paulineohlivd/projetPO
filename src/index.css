@@ -182,7 +182,7 @@ p {
 .resume {
   width: 1000px;
   background: #f4f4f4;
-  align-items: center;
+  /* align-items: center; */
   display: flex;
   position: relative;
 }
@@ -191,7 +191,7 @@ p {
   width: 40%;
   float: left;
   padding-left: 30px;
-}
+} 
 
 /* .resume-profile img {
   width: 250px;
@@ -207,10 +207,10 @@ p {
 
 .resume-profile-info {
   text-align: center;
-}
+} 
 
 .resume-profile-info .name {
-  margin-top: 20px; 
+  margin-top: 5px; 
   margin-bottom: 0;
   font-size: 27px;
 }
@@ -228,34 +228,11 @@ p {
   color: #13A89E;
   width: 20px;
   height: 20px;
-  font-size: 20px;
+  font-size: 10px;
   text-align: center;
   margin-right: 15px;
   transition-duration: 0.3s;
 } 
-
-/* .resume-follow-icons {
-  text-align: center;
-  vertical-align: middle;
-} */
-
-/* .resume-follow-icons a {
-  display: inline-block;
-  vertical-align: text-bottom;
-} */
-
-/* .resume-follow-icons i {
-  display: inline-block;
-  font-size: 30px;
-  background: #13A89E;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  line-height: 60px;
-  color: #f4f4f4;
-  margin: 0 10px 10px 10px; 
-  transition-duration: 0.3s;
-} */
 
 .resume-right {
   width: 60%;

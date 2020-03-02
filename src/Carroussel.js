@@ -2,13 +2,8 @@ import React from "react";
 import Thumbnail from './Thumbnail.js';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'react-bootstrap';
+import { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel'
 import ContactLink from "./component/ContactLink.js";
 import FollowIcon from "./component/FollowIcon.js";
 import ResumeItem from "./component/ResumeItem.js";
@@ -189,79 +184,54 @@ const interests = [
   }
 ];
 
-function Curriculum(props)  {
-  return (
-    <div className="resume">
-      <div className="resume-left">
-        <div className="resume-profile">
-          <div className="resume-profile-info">
-            <h1 className="name">Pauline Olliveaud</h1>
-            <h2 className="career">Développeur FullStack</h2>
-          </div>
-          <div className="resume-about">
-            <h3>A propos de moi</h3>
+function Carroussel() {
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+  
+    return (
+      <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=First slide&bg=373940"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p id="firstslide">Coucou first slide</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=Second slide&bg=282c34"
+            alt="Second slide"
+          />
+  
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=Third slide&bg=20232a"
+            alt="Third slide"
+          />
+  
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
             <p>
-              La chimiste au devant du digital !
-              Je suis actuellement en reconversion pour devenir développeur FullStack !
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
-          </div>
-          <div className="resume-contact">
-            <h3>Contact</h3>
-            <div className="resume-contact-info">
-              {contactList.map(item => (
-                <ContactLink key={item.link} {...item} />
-              ))}
-            </div>
-          </div>
-          {/* <div className="resume-follow">
-            <h3>Follow Me</h3>
-            <div className="resume-follow-icons">
-              {followList.map(item => (
-                <FollowIcon key={item.id} {...item} />
-              ))}
-            </div>
-          </div> */}
-        </div>
-        <div className="competences">
-          <h3> Compétences en cours d'acquisition </h3>
-          {/* <SkillBar title="HTML5" value={4} />
-          <SkillBar title="CSS3" value={4} />
-          <SkillBar title="Javascript" value={3} />
-          <SkillBar title="ReactJs" value={3} /> */}
-          <p>Langages : HTML, CSS, Javascript, PHP 7, PL/SQL, Java<br></br>
-          Environnement : Eclipse, PHPStorm, Android Studio<br></br>
-          Plateforme / FrameWork : Symfony 3 (Wamp), Boostrap, JQuery, Java SE et EE <br></br>
-          CMS : Wordpress<br></br>
-          ORM : Doctrine<br></br>
-          Méthodes : Modélisation de données (Oracle CDM) et Méthode de développement Agile (Scrum), UML(Unified Modeling Language)<br></br>
-          Base de données : SQLServer, Oracle, MySQL</p>
-        </div>
-
-        
-      </div>
-      <div className="resume-right">
-       
-        <ResumeItem title="Expériences">
-          {experience.map(item => (
-            <TimeRangeBlock {...item} />
-          ))}
-        </ResumeItem>
-      
-
-        <ResumeItem title="Formation">
-          {education.map(item => (
-            <TimeRangeBlock {...item} />
-          ))}
-        </ResumeItem>
-
-        <InterestItem title="Interêts">
-          {interests.map(item => (
-            <Interest {...item} />
-          ))}
-        </InterestItem>
-      </div>
-    </div>
-  );
-}
-
-export default Curriculum;
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    );
+  }
+  
+  export default Carroussel;
