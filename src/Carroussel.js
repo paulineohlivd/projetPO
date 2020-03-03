@@ -1,9 +1,10 @@
 import React from "react";
 import Thumbnail from './Thumbnail.js';
 import "./index.css";
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.css";
 import { Carousel } from 'react-responsive-carousel';
 import ContactLink from "./component/ContactLink.js";
 import FollowIcon from "./component/FollowIcon.js";
@@ -189,17 +190,24 @@ function Carroussel() {
 
     return (
       <Carousel>
-                <div>
-                    <img src="assets/1.jpeg" />
+                {/* <Container>
+                  <Row>
+                    <Col xs={10}> */}
+                  <div>
+                  <i class="fas fa-laptop-code"></i>
                     <p className="legend">Expériences</p>
                       <ResumeItem title="Expériences">
                        {experience.map(item => (
                     <TimeRangeBlock {...item} />
                    ))}
-        </ResumeItem>
-                </div>
+                       </ResumeItem>
+                    {/* </Col>  
+                  </Row>
+                </Container> */}
+                  </div>  
+                  
                 <div>
-                    <img src="assets/2.jpeg" />
+                <i class="fas fa-graduation-cap"></i>
                     <p className="legend">Formations</p>
                     <ResumeItem title="Formation">
           {education.map(item => (
