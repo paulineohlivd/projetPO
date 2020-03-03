@@ -3,7 +3,8 @@ import Thumbnail from './Thumbnail.js';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import ContactLink from "./component/ContactLink.js";
 import FollowIcon from "./component/FollowIcon.js";
 import ResumeItem from "./component/ResumeItem.js";
@@ -185,52 +186,32 @@ const interests = [
 ];
 
 function Carroussel() {
-    const [index, setIndex] = useState(0);
-  
-    const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
-    };
-  
+
     return (
-      <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p id="firstslide">Coucou first slide</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Second slide"
-          />
-  
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-  
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <Carousel>
+                <div>
+                    <img src="assets/1.jpeg" />
+                    <p className="legend">Expériences</p>
+                      <ResumeItem title="Expériences">
+                       {experience.map(item => (
+                    <TimeRangeBlock {...item} />
+                   ))}
+        </ResumeItem>
+                </div>
+                <div>
+                    <img src="assets/2.jpeg" />
+                    <p className="legend">Formations</p>
+                    <ResumeItem title="Formation">
+          {education.map(item => (
+            <TimeRangeBlock {...item} />
+          ))}
+        </ResumeItem>
+                </div>
+                <div>
+                    <img src="assets/3.jpeg" />
+                    <p className="legend">Projets</p>
+                </div>
+            </Carousel>
     );
   }
   
