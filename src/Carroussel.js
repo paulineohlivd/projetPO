@@ -194,7 +194,6 @@ function Carroussel() {
                   <Row>
                     <Col xs={10}> */}
                   <div>
-                  <i class="fas fa-laptop-code"></i>
                     <p className="legend">Expériences</p>
                       <ResumeItem title="Expériences">
                        {experience.map(item => (
@@ -207,7 +206,7 @@ function Carroussel() {
                   </div>  
                   
                 <div>
-                <i class="fas fa-graduation-cap"></i>
+                
                     <p className="legend">Formations</p>
                     <ResumeItem title="Formation">
           {education.map(item => (

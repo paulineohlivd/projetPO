@@ -145,23 +145,34 @@ i{
 /* Carousel */
 
 li.slide.selected {
-  opacity : 0.8;
+  opacity : 0.9;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
-  width:900px;
+  width:1000px;
   text-align: left;
+  color: #253237;
 }
 
 ul.slider.animated {
-  opacity : 0.8;
+  opacity : 0.9;
   border-radius: 10px;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 900px;
+  width: 1000px;
   text-align: left;
-  color: white;
+  color: #253237;
 }
+
+.time-range-block {
+  /* padding: 20px 0;
+  padding-left: 30px;
+  border-left: solid 2px #5e5a5e;
+  position: relative; */
+  display: flex;
+  flex-direction: row;
+}
+
 
 
 
