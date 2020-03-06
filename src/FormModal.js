@@ -21,19 +21,20 @@ function FormModal(props) {
         <>
             <i class="fas fa-envelope" onClick={handleShow}></i>
 
-            <Modal  id="modale" show={show} onHide={handleClose}>
+            <Modal id="modale" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>On reste en contact ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Envoyez moi un petit message !</Modal.Body>
-
+                    <form id="formulaireContact" method="post" action="mail.php">
                 <FormContact></FormContact>
+                     </form>
 
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Fermer
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" type="submit"  onClick={handleClose}>
                         Envoyer
                     </Button>
                 </Modal.Footer>
