@@ -34,8 +34,8 @@ function FormModal(props) {
                     <Button variant="secondary" onClick={handleClose}>
                         Fermer
                     </Button>
-                    <Button variant="primary" type="submit"  onClick={handleClose}>
-                        Envoyer
+                    <Button variant="primary" type="submit"  onClick={handleClose}> 
+                    <a href="mailto:pauline@olliveaud.fr">Envoyer</a>
                     </Button>
                 </Modal.Footer>
             </Modal>

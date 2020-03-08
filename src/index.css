@@ -173,6 +173,11 @@ ul.slider.animated {
   flex-direction: row;
 }
 
+a:hover{
+  text-decoration: none; 
+  color: white;
+}
+
 
 
 

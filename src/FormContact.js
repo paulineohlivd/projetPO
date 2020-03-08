@@ -14,6 +14,7 @@ class FormContact extends React.Component {
         this.state = {
             nom: '',
             prenom: '',
+            email:'',
             message:''
         };
 
@@ -30,6 +31,7 @@ class FormContact extends React.Component {
 
         this.setState({nom: event.target.nom});
         this.setState({prenom: event.target.prenom});
+        this.setState({prenom: event.target.email});
         this.setState({message: event.target.message});  
         }
 
@@ -54,6 +56,15 @@ class FormContact extends React.Component {
                         type="text" 
                         placeholder="Votre prenom" 
                         value={this.state.prenom}
+                        onChange={this.handleInputChange} />
+                  </Form.Group>
+
+                  <Form.Group controlId="formBasicMail">
+                     <Form.Control 
+                        type="email" 
+                        name="email"
+                        placeholder="Votre email" 
+                        value={this.state.email}
                         onChange={this.handleInputChange} />
                   </Form.Group>
 

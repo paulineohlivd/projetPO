@@ -6,10 +6,18 @@
 </head>
 
 <body>
-    <?php
-    $retour = mail('pauline@olliveaud.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From : pauline@olliveaud.fr');
-    if ($retour) {
-        echo '<p>Votre message a bien été envoyé.</p>';
+<?php
+    if (isset($_POST['message'])) {
+        $position_arobase = strpos($_POST['email'], '@');
+        if ($position_arobase === false)
+            echo '<p>Votre email doit comporter un arobase.</p>';
+        else {
+            $retour = mail('pauline.olliveaud@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: pauline@olliveaud.fr' . $_POST['email']);
+            if($retour)
+                echo '<p>Votre message a été envoyé.</p>';
+            else
+                echo '<p>Erreur.</p>';
+        }
     }
     ?>
 </body>
