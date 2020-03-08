@@ -85,10 +85,9 @@ const experience = [
   {
     startDate: new Date("2019-09"),
     endDate: new Date("ongoing"),
-    title: "Projets informatiques développés à l'ENI",
+    title: "Projets informatiques développés à l'ENI - ENI Ecole Informatique - Nantes (2019-2020)",
     children: (
       <>
-        <p>ENI Ecole Informatique - Nantes (2019-2020)</p>
         <p>
           <ul>
           <li> Développement d’un site d’enchères sous Java EE et SQL Server </li>
@@ -101,90 +100,96 @@ const experience = [
   {
     startDate: new Date("2019-07"),
     endDate: new Date("2019-07"),
-    title: "Stage d'observation",
+    title: "Stage d'observation - Stéréosuper - Nantes (Juillet 2019)",
     children: (
       <>
-        <p>Stéréosuper - Nantes (Juillet 2019)</p>
+        <p>
         <ul>
           <li> Découvert du métier de développeur web Front End </li>
           <li> Utilisation d'outils de développement et librairies</li>
         </ul>
+        </p>
+        
       </>
     )
   },
   {
     startDate: new Date("2019-05"),
     endDate: new Date("2019-06"),
-    title: "Digital Job Ambition #3",
+    title: "Digital Job Ambition #3 - Maison de l'emploi de Nantes (Mai à Juin 2019)",
     children: (
       <>
-        <p>Maison de l'emploi de Nantes (Mai à Juin 2019)</p>
+      <p>
         <ul>
           <li> Découverte de l’écosystème numérique : métiers, entreprises, écoles </li>
           <li> Techniques d'initiation: HTML, CSS, data, UX / UI, scrum </li>
           <li> Production d’un site web pour un client (association) </li>
           <li> Production de documents techniques (tutoriels)</li>
         </ul>
+      </p>  
       </>
     )
   },
   {
     startDate: new Date("2017-03"),
     endDate: new Date("2019-02"),
-    title: "Spécialiste Validation et Métrologie",
+    title: "Spécialiste Validation et Métrologie - Pfizer - Montréal (Mars 2017 à Février 2019)",
     children: (
       <>
-        <p>Pfizer - Montréal (Mars 2017 à Février 2019)</p>
+      <p>
         <ul>
           <li> Expert Data Integrity : Assurance et maintien de l'intégrité et exactitude des données tout au long de leur cycle de vie dans l'usine </li>
         </ul>
+      </p>  
       </>
     )
   },
   {
     startDate: new Date("2016-04"),
     endDate: new Date("2017-02"),
-    title: "Chimiste Analytique",
+    title: "Chimiste Analytique - GIRPA - Angers (Avril 2016 à Février 2017)",
     children: (
       <>
-        <p>GIRPA - Angers (Avril 2016 à Février 2017)</p>
+      <p>
         <ul>
           <li> Réalisation de dossiers d'autorisation de mise sur le marché de nouveaux pesticides - Analyses et rédaction
 Traitement de données brutes </li>
         </ul>
+      </p>  
       </>
     )
   },
   {
     startDate: new Date("2012-02"),
     endDate: new Date("2016-03"),
-    title: "Chargée secteur bactériologie des eaux",
+    title: "Chargée secteur bactériologie des eaux - LDA56 - Saint-Avé (Avril 2016 à Février 2017)",
     children: (
       <>
-        <p>LDA56 - Saint-Avé (Avril 2016 à Février 2017)</p>
+      <p>
         <ul>
           <li> Encadrement équipe de 3 techniciens </li>
           <li> Analyses dans le cadre du contrôle sanitaire sur les eaux de réseau et de loisir du Morbihan</li>
         </ul>
+      </p>  
       </>
     )
   },
 ];
 
-const interests = [
-  {
-    icon: "fas fa-running"
-  },
-  {
-    icon: "fas fa-theater-masks"
-  },
-  {
-    icon: "fas fa-globe-africa"
-  },
-  {
-    icon: "fas fa-music"
-  }
-];
+// const interests = [
+//   {
+//     icon: "fas fa-running"
+//   },
+//   {
+//     icon: "fas fa-theater-masks"
+//   },
+//   {
+//     icon: "fas fa-globe-africa"
+//   },
+//   {
+//     icon: "fas fa-music"
+//   }
+// ];
 
 function Carroussel() {
 
@@ -193,32 +198,27 @@ function Carroussel() {
                 {/* <Container>
                   <Row>
                     <Col xs={10}> */}
-                  <div>
-                    <p className="legend">Expériences</p>
+                      <div class="caroussel">
                       <ResumeItem title="Expériences">
                        {experience.map(item => (
-                    <TimeRangeBlock {...item} />
+                      <TimeRangeBlock {...item} />
                    ))}
-                       </ResumeItem>
-                    {/* </Col>  
-                  </Row>
-                </Container> */}
-                  </div>  
-                  
-                <div>
-                
-                    <p className="legend">Formations</p>
+                       </ResumeItem>     
+                      </div>
+         
+                    <div class="caroussel">
                     <ResumeItem title="Formation">
-          {education.map(item => (
-            <TimeRangeBlock {...item} />
-          ))}
-        </ResumeItem>
+                    {education.map(item => (
+                    <TimeRangeBlock {...item} />
+                    ))}
+                    </ResumeItem>    
+                    </div> 
+                
+                <div class="caroussel"> 
+                    <img src="assets/3.jpeg" /> 
                 </div>
-                <div>
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Projets</p>
-                </div>
-            </Carousel>
+                
+        </Carousel>
     );
   }
   

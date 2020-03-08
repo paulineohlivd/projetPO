@@ -143,9 +143,9 @@ class App extends React.Component {
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height:'auto'}}
           onClick={() => this.parallax.scrollTo(1)}>
           {
-              <div>
+              
                 <Carroussel></Carroussel>
-              </div>
+              
           }
            
         </ParallaxLayer>

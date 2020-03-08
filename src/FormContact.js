@@ -2,6 +2,7 @@ import React from "react";
 import Thumbnail from './Thumbnail.js';
 import './App.css';
 import './index.css';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     Card, CardImg, CardText, CardBody,
@@ -55,7 +56,7 @@ class FormContact extends React.Component {
                 })
                 .catch(error => this.setState({ error: error.message }));
             };
-        
+
 
         render() {
             return (
@@ -84,7 +85,7 @@ class FormContact extends React.Component {
                         value={this.state.message} 
                         onChange={e => this.setState({ message: e.target.value })} />
                   </Form.Group>
-                  <Button variant="primary" type="submit" onClick={e => this.handleSubmit(e)} value="Submit"> 
+                  <Button variant="primary" type="submit" onClick={e => this.handleSubmit(e)} value="Submit" > 
                     Envoyer
                  </Button> 
                     <div>

@@ -145,7 +145,7 @@ i{
 /* Carousel */
 
 li.slide.selected {
-  opacity : 0.9;
+  background-color: #F2EEF1;
   border-radius: 10px;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -157,9 +157,10 @@ li.slide.selected {
 ul.slider.animated {
   opacity : 0.9;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
   width: 1000px;
+  height:auto;
   text-align: left;
   color: #253237;
 }
@@ -175,8 +176,17 @@ ul.slider.animated {
 
 a:hover{
   text-decoration: none; 
-  color: white;
+  color: #F2EEF1;
 }
+
+.resume-item {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #F2EEF1; 
+}
+
+
+
 
 
 

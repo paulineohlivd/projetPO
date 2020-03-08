@@ -19,7 +19,7 @@ function FormModal(props) {
 
     return (
         <>
-            <i class="fas fa-envelope" onClick={handleShow}></i>
+            <i className="fas fa-envelope" onClick={handleShow}></i>
 
             <Modal id="modale" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
