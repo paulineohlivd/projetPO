@@ -7,15 +7,19 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Modal, Form
   } from 'react-bootstrap';
+import axios from 'axios';
+
+const API_PATH = 'http://localhost/projetPO/api/contact/index.php';
 
 class FormContact extends React.Component {
    constructor(props) {
         super(props);
         this.state = {
             nom: '',
-            prenom: '',
             email:'',
-            message:''
+            message:'',
+            mailSent: false,
+            error: null
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,33 +34,38 @@ class FormContact extends React.Component {
         const name = target.name;*/ 
 
         this.setState({nom: event.target.nom});
-        this.setState({prenom: event.target.prenom});
         this.setState({prenom: event.target.email});
         this.setState({message: event.target.message});  
         }
 
         handleSubmit(event){
-            alert('Votre message est' + this.state.message);
             event.preventDefault();
-        }
+            console.log(this.state);
+            console.log(API_PATH);
+            axios({
+                method: 'post',
+                url: `${API_PATH}`,
+                headers: { 'content-type': 'application/json' },
+                data: this.state
+              })
+                .then(result => {
+                  this.setState({
+                    mailSent: result.data.sent
+                  })
+                })
+                .catch(error => this.setState({ error: error.message }));
+            };
+        
 
         render() {
             return (
-                <div>
+                <Form id="formulaireContact" action="#">
                      <Form.Group controlId="formBasicNom">
                      <Form.Control 
                         type="text" 
                         placeholder="Votre nom" 
                         value={this.state.nom}
-                        onChange={this.handleInputChange} />
-                  </Form.Group>
-
-                  <Form.Group controlId="formBasicPrenom">
-                     <Form.Control 
-                        type="text" 
-                        placeholder="Votre prenom" 
-                        value={this.state.prenom}
-                        onChange={this.handleInputChange} />
+                        onChange={e => this.setState({ nom: e.target.value })} />
                   </Form.Group>
 
                   <Form.Group controlId="formBasicMail">
@@ -65,7 +74,7 @@ class FormContact extends React.Component {
                         name="email"
                         placeholder="Votre email" 
                         value={this.state.email}
-                        onChange={this.handleInputChange} />
+                        onChange={e => this.setState({ email: e.target.value })}/>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicMessage">
@@ -73,9 +82,17 @@ class FormContact extends React.Component {
                         name="message"
                         placeholder="Votre message" 
                         value={this.state.message} 
-                        onChange={this.handleInputChange} />
+                        onChange={e => this.setState({ message: e.target.value })} />
                   </Form.Group>
-                </div>
+                  <Button variant="primary" type="submit" onClick={e => this.handleSubmit(e)} value="Submit"> 
+                    Envoyer
+                 </Button> 
+                    <div>
+                        {this.state.mailSent &&
+                    <div>Thank you for contcting us.</div>
+                        }
+                    </div>
+                </Form>
     
         );
     }

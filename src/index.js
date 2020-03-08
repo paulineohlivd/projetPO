@@ -94,17 +94,17 @@ class App extends React.Component {
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {
 
-            <div class="entete">
+            <div className="entete">
               <h1> Site de Pauline</h1>
-              <h2> Découvrez-en un peu plus sur moi plus bas <i class="far fa-grin"></i> </h2>
+              <h2> Découvrez-en un peu plus sur moi plus bas <i className="far fa-grin"></i> </h2>
             </div>
           }
           {
-            <div class="scroll">
+            <div className="scroll">
               <p>SCROLL</p>
               <svg version="1.1" x="0px" y="0px" viewBox="0 0 167 299">
-                <polygon class="fill-3" points="167,73 83.5,298.9 0,73 " style={{ fill: "pink" }}></polygon>
-                <polygon class="fill-1" points="137.4,0 83.5,145.9 29.6,0 " style={{ fill: "#805E73" }} ></polygon>
+                <polygon className="fill-3" points="167,73 83.5,298.9 0,73 " style={{ fill: "pink" }}></polygon>
+                <polygon className="fill-1" points="137.4,0 83.5,145.9 29.6,0 " style={{ fill: "#805E73" }} ></polygon>
               </svg>
             </div>
 

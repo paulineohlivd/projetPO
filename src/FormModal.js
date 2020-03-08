@@ -26,18 +26,9 @@ function FormModal(props) {
                     <Modal.Title>On reste en contact ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Envoyez moi un petit message !</Modal.Body>
-                    <form id="formulaireContact" method="post" action="./mail.php">
+                    
                 <FormContact></FormContact>
 
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Fermer
-                    </Button>
-                    <Button variant="primary" type="submit"  onClick={handleClose}> 
-                    Envoyer
-                    </Button>
-                </Modal.Footer>
-                </form>
             </Modal>
         </>
     );

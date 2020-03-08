@@ -26,8 +26,8 @@ function CardPresentation(props) {
                   
          </Card.Text>
          <Button variant="primary">En savoir plus</Button><br></br>
-         <a href="https://github.com/paulineohlivd?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
-         <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+         <a href="https://github.com/paulineohlivd?tab=repositories" target="_blank"><i className="fab fa-github"></i></a>
+         <a href="https://www.linkedin.com/feed/" target="_blank"><i className="fab fa-linkedin"></i></a>
          <FormModal id="modale"></FormModal>
          
        </Card.Body>
