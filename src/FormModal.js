@@ -28,16 +28,16 @@ function FormModal(props) {
                 <Modal.Body>Envoyez moi un petit message !</Modal.Body>
                     <form id="formulaireContact" method="post" action="mail.php">
                 <FormContact></FormContact>
-                     </form>
 
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Fermer
                     </Button>
                     <Button variant="primary" type="submit"  onClick={handleClose}> 
-                    <a href="mailto:pauline@olliveaud.fr">Envoyer</a>
+                    Envoyer
                     </Button>
                 </Modal.Footer>
+                </form>
             </Modal>
         </>
     );
